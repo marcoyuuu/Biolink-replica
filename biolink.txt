@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://bio.link/redsismica -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <link rel="shortcut icon" href="./Red Sísmica de Puerto Rico_files/LcazPbLM1ZDcPVvvC95DHTZ9vUynyNeD.png" type="image/webp">
+    <link rel="icon" href="./Red Sísmica de Puerto Rico_files/LcazPbLM1ZDcPVvvC95DHTZ9vUynyNeD.png" type="image/webp">
+    <meta name="description" content="Nuestra mision es monitorear y determinar rapidamente un terremoto.">
+    <meta property="og:title" content="Red Sísmica de Puerto Rico">
+    <link rel="canonical" href="https://bio.link/redsismica">
+    <meta property="og:url" content="https://bio.link/redsismica">
+    <meta property="og:description" content="Nuestra mision es monitorear y determinar rapidamente un terremoto.">
+    <meta property="og:image:secure_url" content="https://cdn.bio.link/uploads/profile_pictures/2023-12-06/LcazPbLM1ZDcPVvvC95DHTZ9vUynyNeD.png">
+    <meta property="og:image" content="https://cdn.bio.link/uploads/profile_pictures/2023-12-06/LcazPbLM1ZDcPVvvC95DHTZ9vUynyNeD.png">
+    <meta property="profile:username" content="redsismica">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Red Sísmica de Puerto Rico">
+    <meta name="twitter:image" content="https://cdn.bio.link/uploads/profile_pictures/2023-12-06/LcazPbLM1ZDcPVvvC95DHTZ9vUynyNeD.png">
+    <meta name="twitter:url" content="https://bio.link/redsismica">
+    <link rel="preload" as="image" href="./Red Sísmica de Puerto Rico_files/LcazPbLM1ZDcPVvvC95DHTZ9vUynyNeD.png">
+    <title>Red Sísmica de Puerto Rico</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="./Red Sísmica de Puerto Rico_files/LcazPbLM1ZDcPVvvC95DHTZ9vUynyNeD.png">
+    <link rel="manifest" href="https://bio.link/manifest.json">
+    <link rel="dns-prefetch" href="https://analytics.bio.link/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/">
+            <link href="./Red Sísmica de Puerto Rico_files/css2" rel="stylesheet">
