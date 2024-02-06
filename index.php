@@ -21,6 +21,7 @@ $currentYear = date("Y");
             background-image: url('assets/faro_bg.jpg');
             background-size: cover;
             background-attachment: fixed;
+            background-position: center;
             color: #000000;
             margin: 24px 0px 48px;
             padding: 0px 0px 100px;
@@ -31,9 +32,10 @@ $currentYear = date("Y");
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            width: 100%;
+            max-width: 52.5%;
             /* Adjust based on preference */
             margin: auto;
+            width: 100%;
         }
 
         .display-image {
@@ -43,45 +45,46 @@ $currentYear = date("Y");
             display: block;
         }
 
+        .buttons-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+        }
+
         .page-item-each {
+            background-color: #ffcd62;
+            border-radius: 50px;
+            width: 650px;
+            padding: 10px;
+            margin-bottom: 15px;
+            text-decoration: none;
+            color: #000000;
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #ffcd62;
-            /* Button fill color */
-            border-radius: 30px;
-            /* Adjust as needed for oval shape */
-            width: 100%;
-            /* Match the size of the div wrapper */
-            text-align: center;
-            font-family: 'Inter', sans-serif;
-            padding: 10px;
-            /* Adjust padding to fit content */
-            margin: 10px auto;
-            /* Center buttons and add space between them */
             transition: all 0.3s ease;
-            /* Smooth transition for hover effect */
         }
 
         .page-item-each:hover {
             transform: scale(1.05);
-            /* Button grows on hover */
         }
 
-        /* Assuming you're adding an <img> inside .page-item-each for the photo */
         .page-item-each img {
-            width: 30px;
-            /* Adjust based on your preference */
-            height: 30px;
+            order: -1;
+            margin-left: 5px;
+            width: 40px;
+            height: 40px;
             border-radius: 50%;
-            margin-right: 15px;
-            /* Adjust based on your preference */
+            object-fit: cover;
         }
 
         .item-title {
             text-align: center;
             color: #000000;
             font-family: 'Inter', sans-serif;
+            flex-grow: 1;
+            text-align: center;
         }
 
         h1 {
@@ -111,20 +114,25 @@ $currentYear = date("Y");
         .icon-container {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 25px;
             width: 5%;
             /* Set the container width to 50% of its parent */
             margin: auto;
             /* Center the container */
+            margin-bottom: 35px;
         }
 
         .icon-container img {
-            width: 24px;
+            width: 30px;
             /* Adjust the width as needed */
-            height: 24px;
+            height: 30px;
             /* Adjust the height to maintain aspect ratio */
             object-fit: contain;
             /* Ensures the image fits nicely without distortion */
+        }
+
+        .display-image {
+            margin-top: 50px;
         }
     </style>
 </head>
@@ -145,15 +153,39 @@ $currentYear = date("Y");
         </div>
 
         <!-- Botones -->
-        <div>
-            <a href="https://www.tsunamizone.org/puertorico/" class="page-item-each"><span class="item-title">Caribe Wave</span> </a>
-            <a href="https://redsismica.uprm.edu/" class="page-item-each"><span class="item-title">Página principal</span></a>
-            <a href="https://redsismica.uprm.edu/spanish/educacion/solicitud_conferencia.php" class="page-item-each"><span class="item-title">Solicitud de Charlas</span></a>
-            <a href="https://redsismica.uprm.edu/spanish/educacion/recursos_educativos.php" class="page-item-each"><span class="item-title">Recursos Educativos</span></a>
-            <a href="https://redsismica.uprm.edu/spanish/tsunami/" class="page-item-each"><span class="item-title">Portal de tsunami</span></a>
-            <a href="https://prddst.uprm.edu/" class="page-item-each"><span class="item-title">Map tool</span></a>
-            <a href="https://redsismica.uprm.edu/spanish/tsunami/mapas_desalojo.php" class="page-item-each"><span class="item-title">Mapas de Desalojo</span></a>
-            <a href="https://www.shakeout.org/puertorico/" class="page-item-each"><span class="item-title">Shake Out</span></a>
+        <div class="buttons-container">
+            <a href="https://www.tsunamizone.org/puertorico/" class="page-item-each">
+                <img src="assets/cwave.png" alt="Icon">
+                <span class="item-title">Caribe Wave</span>
+            </a>
+            <a href="https://redsismica.uprm.edu/" class="page-item-each">
+                <img src="assets/princ.png" alt="Icon">
+                <span class="item-title">Página principal</span>
+            </a>
+            <a href="https://redsismica.uprm.edu/spanish/educacion/solicitud_conferencia.php" class="page-item-each">
+                <img src="assets/char.png" alt="Icon">
+                <span class="item-title">Solicitud de Charlas</span>
+            </a>
+            <a href="https://redsismica.uprm.edu/spanish/educacion/recursos_educativos.php" class="page-item-each">
+                <img src="assets/edu.png" alt="Icon">
+                <span class="item-title">Recursos Educativos</span>
+            </a>
+            <a href="https://redsismica.uprm.edu/spanish/tsunami/" class="page-item-each">
+                <img src="assets/tsu.png" alt="Icon">
+                <span class="item-title">Portal de tsunami</span>
+            </a>
+            <a href="https://prddst.uprm.edu/" class="page-item-each">
+                <img src="assets/maptool.png" alt="Icon">
+                <span class="item-title">Map tool</span>
+            </a>
+            <a href="https://redsismica.uprm.edu/spanish/tsunami/mapas_desalojo.php" class="page-item-each">
+                <img src="assets/map.png" alt="Icon">
+                <span class="item-title">Mapas de Desalojo</span>
+                </a>
+            <a href="https://www.shakeout.org/puertorico/" class="page-item-each">
+                <img src="assets/shake.png" alt="Icon">
+                <span class="item-title">Shake Out</span>
+            </a>
         </div>
     </div>
 </body>
