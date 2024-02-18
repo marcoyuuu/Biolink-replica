@@ -2,7 +2,7 @@
 
 ## Descripción
 
-Este proyecto es una réplica del Bio Link de la Red Sísmica de Puerto Rico, codificada para correr en nuestros servidores. La página es diseñada para proporcionar información y recursos útiles relacionados con la sismología en Puerto Rico. Incluye enlaces a recursos educativos, herramientas de mapeo, información sobre tsunamis y programas de preparación para terremotos, así como opciones para compartir el sitio a través de redes sociales o correo electrónico.
+Este proyecto es una réplica del Bio Link de la Red Sísmica de Puerto Rico hecha por el equipo de educación, codificada para correr en nuestros servidores. La página es diseñada para proporcionar información y recursos útiles relacionados con la sismología en Puerto Rico. Incluye enlaces a recursos educativos, herramientas de mapeo, información sobre tsunamis y programas de preparación para terremotos, así como opciones para compartir el sitio a través de redes sociales o correo electrónico.
 
 ## Características
 
