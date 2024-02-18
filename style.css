@@ -1,4 +1,11 @@
-/* Estilos básicos del cuerpo de la página */
+/* Reset básico para asegurar consistencia entre navegadores */
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+/* Estilos globales del cuerpo de la página */
 body {
     font-family: 'Inter', sans-serif;
     background-image: url('assets/faro_bg.jpg');
@@ -8,8 +15,9 @@ body {
     color: #000000;
 }
 
-/* Contenedor principal para centrar elementos en la página */
+/* Estilos del contenedor principal */
 .contenedor-principal {
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -22,7 +30,7 @@ body {
 /* Estilo para el logo en la parte superior de la página */
 .logo {
     width: 6.5vw;
-    height: auto;
+    height: 6.5vw;
     margin: 0 auto;
     display: block;
     margin-top: 3vh;
@@ -35,6 +43,7 @@ h1 {
     text-align: center;
 }
 
+/* Estilo para el subtítulo de la página */
 h2 {
     font-size: 1em;
     text-align: center;
@@ -48,7 +57,9 @@ h2 {
     gap: 2vw;
     width: 5%;
     margin: auto;
+    margin-top: 1vh;
     margin-bottom: 5vh;
+    transition: all 0.3s ease;
 }
 
 /* Estilo para imágenes de los íconos de compartir */
@@ -58,7 +69,12 @@ h2 {
     object-fit: contain;
 }
 
-/* Estilos para los botones de compartir y su contenedor */
+/* Estilos para los íconos de compartir al desplazar el cursor */
+.contenedor-icono img:hover {
+    transform: scale(1.25);
+}
+
+/* Estilos para los botones de enlaces y su contenedor */
 .contenedor-botones {
     display: flex;
     flex-direction: column;
@@ -66,11 +82,11 @@ h2 {
     width: 100%;
 }
 
-/* Estilos para los botones de compartir */
+/* Estilos para los botones de enlaces */
 .boton {
     background-color: #ffcd62;
     border-radius: 50px;
-    width: 86.5%;
+    width: 80%;
     padding: 0.75vw;
     margin-bottom: 2vh;
     text-decoration: none;
@@ -81,7 +97,7 @@ h2 {
     transition: all 0.3s ease;
 }
 
-/* Estilos para los botones de compartir al desplazar el cursor */
+/* Estilos para los botones de enlaces al desplazar el cursor */
 .boton:hover {
     transform: scale(1.05);
 }
@@ -91,8 +107,8 @@ h2 {
     order: -1;
     margin-right: auto;
     margin-left: 0;
-    width: 40px;
-    height: 40px;
+    width: 2vw;
+    height: 2vw;
     border-radius: 50%;
     object-fit: cover;
 }
@@ -105,41 +121,263 @@ h2 {
     flex-grow: 1;
 }
 
+/* Define animación de terremoto */
+@keyframes terremoto {
+
+    0%,
+    25% {
+        transform: translate(0, 0);
+    }
+
+    5%,
+    10%,
+    15%,
+    20% {
+        transform: translate(-2.5px, 2.5px);
+    }
+
+    7.5%,
+    12.5%,
+    17.5%,
+    22.5% {
+        transform: translate(2.5px, -2.5px);
+    }
+
+    25.1%,
+    100% {
+        transform: translate(0, 0);
+    }
+}
+
+/* Aplica animación de terremoto a boton de Caribe Wave*/
+.boton.terremoto {
+    animation: terremoto 4s infinite;
+}
+
+/* Estilo para botón que abre modal de compartir */
+#botonCompartir {
+    background-color: #ffcd62;
+    border: none;
+    border-radius: 50%;
+    width: 2.5vw;
+    height: 2.5vw;
+    margin-top: 3vh;
+    margin-left: 3vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Estilo para imágen sobre botón que abre modal de compartir */
+#botonCompartir img {
+    width: 1.225vw;
+    height: auto;
+}
+
+/* Estilo para imágen sobre botón que abre modal de compartir al desplazar el cursor */
+#botonCompartir:hover {
+    transform: scale(1.25);
+}
+
 /* Estilos para el modal de compartir */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgb(0, 0, 0, 0.4);
+    background-color: rgb(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
 }
 
 /* Estilos para el contenido del modal de compartir */
-.contenido-modal {
+.contenidoModal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #f4f4f4;
-    margin: 15% auto;
-    padding: 20px;
+    padding: 1%;
     border: 1px solid #888;
-    width: 50%;
+    width: 35rem;
+    height: 25rem;
+    border-radius: 2.5%;
     position: relative;
 }
 
-/* Estilos para el botón para cerrar el modal */
-.cerrar-modal {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
+/* Contenedor para el título, el QR y las opciones de compartir */
+.flexContenedor {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-/* Estilos para ??? */
-.cerrar-modal:hover,
-.cerrar-modal:focus {
+/* Estilos para el botón para cerrar el modal */
+.cerrarModal {
+    color: #aaa;
+    position: absolute;
+    right: 0.5vw;
+    top: 0.1vh;
+    cursor: pointer;
+    font-size: 2.5em;
+}
+
+/* Estilos para el botón para cerrar el modal al desplazar el cursor */
+.cerrarModal:hover,
+.cerrarModal:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
+}
+
+/* Estilo para 'Compartir esta página' */
+.tituloModal {
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 1rem;
+}
+
+/* Contenedor para el código QR */
+.contenedorQR {
+    text-align: center;
+    padding: 1rem;
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilos para el código QR */
+.codigoQR {
+    width: 12.5rem;
+    height: auto;
+}
+
+/* Estilos para el botón de descargar QR */
+.descargarQR {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #55acee;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 7.5% 15%;
+    cursor: pointer;
+}
+
+/* Estilos para que aparezca el botón de descargar QR al desplazar el cursor sobre QR*/
+.contenedorQR:hover .descargarQR {
+    display: block;
+}
+
+/* Estilos para el botón de descargar QR al desplazar el cursor */
+.descargarQR:hover {
+    background-color: #e6b553;
+}
+
+/* Contenedor para las opciones de compartir */
+.opcionesCompartir {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex-grow: 1;
+}
+
+/* Estilos para cada botón de compartir */
+.botonSharePg {
+    display: flex;
+    text-decoration: none;
+    align-items: center;
+    gap: 2.5vw;
+    padding: 1.5vh;
+    border-radius: 5px;
+    color: inherit;
+}
+
+/* Estilos para las imágenes dentro de los botones de compartir */
+.botonSharePg img {
+    order: -1;
+    margin-right: auto;
+    margin-left: 0;
+    width: 1.5vw;
+    height: auto;
+    object-fit: cover;
+}
+
+/* Estilos para el texto dentro de los botones de compartir */
+.textoCompartir {
+    text-align: center;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    flex-grow: 1;
+}
+
+/* Agrega un signo '>' al final de cada botón de compartir */
+.botonSharePg::after {
+    content: ">";
+    color: #000000;
+    margin-left: auto;
+}
+
+/* Estilos para el contenedor del enlace a copiar */
+.enlaceCopiar {
+    position: absolute;
+    align-items: center;
+    bottom: 3vh;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 1vw;
+    width: 80%;
+    border: 3px solid #dddddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+/* Estilos para el texto que contiene el enlace */
+.enlaceCopiar input[type="text"] {
+    border: none;
+    flex-grow: 1;
+    font-size: 1em;
+    background-color: transparent;
+}
+
+/* Estilos para el ícono de enlace */
+.enlaceCopiar i {
+    font-size: 1.5em;
+    margin-left: 1vw;
+}
+
+/* Estilos para el botón de copiar */
+#botonCopiar {
+    background-color: #55acee;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 3% 7.5%;
+    cursor: pointer;
+}
+
+/* Estilos para el botón de copiar al desplazar el cursor */
+#botonCopiar:hover {
+    background-color: #e6b553;
+}
+
+/* Estilos para el pie de página */
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 2vh 0;
+    margin-top: 10vh;
+    width: 100vw;
+    position: relative;
 }
