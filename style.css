@@ -1,3 +1,44 @@
+/* Para pantallas de ancho superior a 768px (por ejemplo, PCs y laptops) */
+@media (min-width: 768px) {
+    .logo {
+        width: 8vw; /* Ajusta según sea necesario para pantallas grandes */
+        max-width: 150px; /* Puede aumentar el tamaño máximo para pantallas grandes */
+    }
+
+    h2 {
+        font-size: 1em;
+    }
+
+    .contenedor-icono {
+        gap: 2vw
+    }
+
+    .contenedor-botones {
+        max-width: 80vw;
+    }
+}
+
+/* Para pantallas de ancho inferior a 768px (por ejemplo, tablets y móviles) */
+@media (max-width: 768px) {
+    .logo {
+        width: 100vw; /* Ajusta según sea necesario para pantallas pequeñas */
+        min-width: 75px; /* Puede disminuir el tamaño mínimo para pantallas pequeñas */
+    }
+
+    h2 {
+        font-size: 0.75em;
+    }
+
+    .contenedor-icono {
+        gap: 4vw
+    }
+
+    .contenedor-botones {
+        min-width: 100vw;
+    }
+}
+
+
 /* Reset básico para asegurar consistencia entre navegadores */
 html,
 body {
@@ -22,15 +63,15 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    max-width: 52.5%;
+    min-width: 50%;
     margin: auto;
     width: 100%;
 }
 
 /* Estilo para el logo en la parte superior de la página */
 .logo {
-    width: 6.5vw;
-    height: 6.5vw;
+    width: 10vw;
+    height: auto;
     margin: 0 auto;
     display: block;
     margin-top: 3vh;
@@ -45,7 +86,6 @@ h1 {
 
 /* Estilo para el subtítulo de la página */
 h2 {
-    font-size: 1em;
     text-align: center;
     font-weight: normal;
 }
@@ -54,7 +94,6 @@ h2 {
 .contenedor-icono {
     display: flex;
     justify-content: center;
-    gap: 2vw;
     width: 5%;
     margin: auto;
     margin-top: 1vh;
@@ -66,6 +105,7 @@ h2 {
 .contenedor-icono img {
     width: 2vw;
     height: auto;
+    min-width: 25px;
     object-fit: contain;
 }
 
@@ -79,7 +119,15 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 100%;
+    width: 100vw;
+}
+
+/* Título de elementos dentro de los botones para alinear texto */
+.titulo-item {
+    text-align: center;
+    color: #000000;
+    font-family: 'Inter', sans-serif;
+    flex-grow: 1;
 }
 
 /* Estilos para los botones de enlaces */
@@ -107,18 +155,12 @@ h2 {
     order: -1;
     margin-right: auto;
     margin-left: 0;
-    width: 2vw;
-    height: 2vw;
+    width: 2.5vw;
+    height: 2.5vw;
+    min-width: 25px;
+    min-height: 25px;
     border-radius: 50%;
     object-fit: cover;
-}
-
-/* Título de elementos dentro de los botones para alinear texto */
-.titulo-item {
-    text-align: center;
-    color: #000000;
-    font-family: 'Inter', sans-serif;
-    flex-grow: 1;
 }
 
 /* Define animación de terremoto */
@@ -149,9 +191,21 @@ h2 {
     }
 }
 
-/* Aplica animación de terremoto a boton de Caribe Wave*/
+/* Define animación de agrandamiento */
+@keyframes agrandar {
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Aplica animación de terremoto a botón de Caribe Wave*/
 .boton.terremoto {
     animation: terremoto 4s infinite;
+}
+
+/* Estilos para el botón de Caribe Wave al desplazar el cursor */
+.boton.terremoto:hover {
+    animation: terremoto 4s infinite, agrandar 0.3s forwards;
 }
 
 /* Estilo para botón que abre modal de compartir */
