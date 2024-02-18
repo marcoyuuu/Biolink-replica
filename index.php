@@ -1,16 +1,10 @@
-<?php
-// Define variables globales para el título de la página y el año actual
-$tituloPagina = "Red Sísmica de Puerto Rico";
-$añoActual = date("Y");
-?>
-
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?php echo $tituloPagina; ?></title>
+    <title id="tituloPagina">Red Sísmica de Puerto Rico</title>
     <link rel="stylesheet" href="style.css">
     <script src="scripts.js" defer></script>
     <link rel="shortcut icon" type="image/jpg" href="assets/logo.png"/>
@@ -128,7 +122,7 @@ $añoActual = date("Y");
 
         <!-- Pie de Página: Contiene derechos de autor con año dinámico -->
         <footer>
-            <p>Copyright &copy; Red Sísmica de Puerto Rico <?php echo $añoActual; ?></p>
+            <p>Copyright &copy; Red Sísmica de Puerto Rico <span id="añoActual">2024</span></p>
         </footer>
     </div>
 
