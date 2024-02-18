@@ -65,5 +65,4 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.removeChild(a); // Elimina el enlace del documento
     });
 
-
 });
