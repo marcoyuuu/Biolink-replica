@@ -45,6 +45,7 @@ h1 {
 h2 {
     text-align: center;
     font-weight: normal;
+    line-height: 1.5;
 }
 
 /* Estilo para los íconos de compartir */
