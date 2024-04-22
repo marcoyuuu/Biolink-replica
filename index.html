@@ -4,15 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title id="tituloPagina">Red Sísmica de Puerto Rico</title>
+    <title id="tituloPagina"></title> <!-- Title will be set dynamically -->
     <link rel="stylesheet" href="style.css">
-    <script src="scripts.js" defer></script>
     <link rel="shortcut icon" type="image/jpg" href="assets/logo.png" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <meta property="og:title" content="¡Haz temblar las redes!" />
     <meta property="og:description" content="Comparte esta página de la Red Sísmica y mantén a todos informados y seguros. 🌍💬 #RedSísmica" />
     <meta property="og:image" content="assets/logo.png" />
     <meta property="og:url" content="https://marcoyuuu.github.io/Biolink-replica/" />
+    <script src="https://unpkg.com/i18next@latest/i18next.min.js"></script>
+    <script src="https://unpkg.com/i18next-http-backend@latest/i18next-http-backend.min.js"></script>
+    <script src="scripts.js" defer></script>
 
     <style>
 
@@ -29,10 +31,8 @@
             <button id="botonCompartir" class="boton-compartir"><img src="assets\share.png" alt="Compartir"></button>
             <!-- Logo, título y subtítulo de la página -->
             <img src="assets/logo.png" class="logo" alt="Logo de la Red Sísmica de Puerto Rico">
-            <h1 class="page-title">Red Sísmica de Puerto Rico</h1>
-            <h2 class="page-bioline">¡Bienvenidos! Explora los siguientes enlaces para que puedas acceder de manera rápida a recursos, 
-                herramientas e información relacionada a terremotos y tsunami. También puedes conectarte con nosotros a través de nuestras 
-                redes sociales, teléfono y correo electrónico. Edúcate, prepárate y se resiliente.</h2>
+            <h1 class="page-title" data-i18n="title"></h1>
+            <h2 class="page-bioline" data-i18n="welcome"></h2>
         </header>
 
         <!-- Contenido Principal: Sección para el contenido específico de la página -->
@@ -53,39 +53,39 @@
 
         <!-- Botones de Enlaces: Proporciona enlaces a recursos y herramientas ofrecidas por la Red Sísmica -->
         <div class="contenedor-botones">
-            <a href="https://www.tsunamizone.org/puertorico/" class="boton terremoto" target="_blank">
+            <a href="" data-i18n="[href]icon1_link" class="boton terremoto" target="_blank">
                 <img src="assets/cwave.png" alt="Icon">
                 <span class="titulo-item">Caribe Wave</span>
             </a>
-            <a href="https://www.shakeout.org/puertorico/" class="boton" target="_blank">
+            <a href="" data-i18n="[href]icon2_link" class="boton" target="_blank">
                 <img src="assets/shake.png" alt="Icon">
                 <span class="titulo-item">Shake Out</span>
             </a>
-            <a href="https://redsismica.uprm.edu/" class="boton" target="_blank">
+            <a href="" data-i18n="[href]icon3_link" class="boton" target="_blank">
                 <img src="assets/logo.png" alt="Icon">
-                <span class="titulo-item">Página principal</span>
+                <span class="titulo-item"data-i18n="icon3"></span>
             </a>
-            <a href="https://redsismica.uprm.edu/spanish/educacion/solicitud_conferencia.php" class="boton"
+            <a href="" data-i18n="[href]icon4_link" class="boton"
                 target="_blank">
                 <img src="assets/char.png" alt="Icon">
-                <span class="titulo-item">Solicitud de Charlas</span>
+                <span class="titulo-item"data-i18n="icon4"></span>
             </a>
-            <a href="https://redsismica.uprm.edu/spanish/educacion/recursos_educativos.php" class="boton"
+            <a href="" data-i18n="[href]icon5_link" class="boton"
                 target="_blank">
                 <img src="assets/edu.png" alt="Icon">
-                <span class="titulo-item">Recursos Educativos</span>
+                <span class="titulo-item"data-i18n="icon5"></span>
             </a>
-            <a href="https://redsismica.uprm.edu/spanish/tsunami/" class="boton" target="_blank">
+            <a href="" data-i18n="[href]icon6_link" class="boton" target="_blank">
                 <img src="assets/tsu.png" alt="Icon">
-                <span class="titulo-item">Portal de tsunami</span>
+                <span class="titulo-item"data-i18n="icon6"></span>
             </a>
-            <a href="https://prddst.uprm.edu/" class="boton" target="_blank">
+            <a href="" data-i18n="[href]icon7_link" class="boton" target="_blank">
                 <img src="assets/maptool.png" alt="Icon">
                 <span class="titulo-item">Map tool</span>
             </a>
-            <a href="https://redsismica.uprm.edu/spanish/tsunami/mapas_desalojo.php" class="boton" target="_blank">
+            <a href="" data-i18n="[href]icon8_link" class="boton" target="_blank">
                 <img src="assets/map.png" alt="Icon">
-                <span class="titulo-item">Mapas de Desalojo</span>
+                <span class="titulo-item"data-i18n="icon8"></span>
             </a>
 
         </div>
@@ -95,40 +95,40 @@
             <div class="contenidoModal">
                 <!-- Botón para cerrar el modal, título del modal, y estructura para compartir vía redes sociales o copiar enlace -->
                 <span id="botonCerrar" class="cerrarModal">&times;</span>
-                <h1 class="tituloModal">Compartir esta página</h1>
+                <h1 class="tituloModal"data-i18n="share_this_page"></h1>
                 <div class="flexContenedor">
                     <div class="contenedorQR">
                         <!-- Imagen del código QR y botón de descarga -->
                         <img src="assets/qr-code.png" class="codigoQR" alt="Código QR">
-                        <button class="descargarQR">Descargar</button>
+                        <button class="descargarQR"data-i18n="qr_download"></button>
                     </div>
                     <div class="opcionesCompartir">
                         <!-- Compartir en Twitter -->
                         <a href="https://twitter.com/intent/tweet?text=%C2%A1Haz%20temblar%20las%20redes!%20Comparte%20esta%20p%C3%A1gina%20de%20la%20Red%20S%C3%ADsmica%20y%20mant%C3%A9n%20a%20todos%20informados%20y%20seguros.%20%F0%9F%8C%8D%F0%9F%92%AC%20%23RedS%C3%ADsmica&url=https://marcoyuuu.github.io/Biolink-replica/"
                             class="botonSharePg twitter" target="_blank">
                             <img src="assets/twitter.png" alt="Twitter">
-                            <span class="textoCompartir">Compartir en Twitter</span>
+                            <span class="textoCompartir"data-i18n="share_on_twitter"></span>
                         </a>
 
                         <!-- Compartir en Facebook -->
                         <a href="https://www.facebook.com/sharer/sharer.php?u=https://marcoyuuu.github.io/Biolink-replica/" class="botonSharePg facebook"
                             class="botonSharePg facebook" target="_blank">
                             <img src="assets/facebook2.png" alt="Facebook">
-                            <span class="textoCompartir">Compartir en Facebook</span>
+                            <span class="textoCompartir"data-i18n="share_on_facebook"></span>
                         </a>
 
                         <!-- Compartir por Email -->
                         <a href="mailto:?subject=%C2%A1Haz%20temblar%20las%20redes!&body=%C2%A1Haz%20temblar%20las%20redes!%20Comparte%20esta%20p%C3%A1gina%20de%20la%20Red%20S%C3%ADsmica%20y%20mant%C3%A9n%20a%20todos%20informados%20y%20seguros.%20%F0%9F%8C%8D%F0%9F%92%AC%20%23RedS%C3%ADsmica%0Ahttps://marcoyuuu.github.io/Biolink-replica/"
                             class="botonSharePg email" target="_blank">
                             <img src="assets/mail.png" alt="Mail">
-                            <span class="textoCompartir">Compartir en Email</span>
+                            <span class="textoCompartir"data-i18n="share_on_email"></span>
                         </a>
                     </div>
                 </div>
                 <div class="enlaceCopiar">
                     <i class="fas fa-link"></i> <!-- Ícono de enlace -->
                     <input type="text" value="https://marcoyuuu.github.io/Biolink-replica/" readonly>
-                    <button id="botonCopiar">Copiar</button>
+                    <button id="botonCopiar"data-i18n="copy"></button>
                 </div>
             </div>
         </div>
@@ -137,7 +137,7 @@
 
         <!-- Pie de Página: Contiene derechos de autor con año dinámico -->
         <footer>
-            <p>Copyright &copy; Red Sísmica de Puerto Rico <span id="añoActual">2024</span></p>
+            <p>Copyright &copy; data-i18n="title" <span id="añoActual">2024</span></p>
         </footer>
     </div>
 

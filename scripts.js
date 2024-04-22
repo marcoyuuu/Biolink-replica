@@ -65,4 +65,40 @@ document.addEventListener('DOMContentLoaded', function () {
         document.body.removeChild(a); // Elimina el enlace del documento
     });
 
+    // Inicialización de i18next para el manejo de internacionalización
+    if (typeof i18next === 'undefined' || typeof i18nextHttpBackend === 'undefined') {
+        console.error('i18next or i18nextHttpBackend is not loaded');
+        return;
+    }
+
+    i18next.use(i18nextHttpBackend).init({
+        lng: 'es', // Idioma inicial. Utiliza detectores de idioma para configurar automáticamente
+        debug: true, // Activa la depuración para ver información detallada en la consola
+        backend: {
+            loadPath: 'traducciones/{{lng}}.json' // Ruta a los archivos de traducción
+        },
+        fallbackLng: 'es', // Unloaded languages will default to Spanish
+    }, function(err, t) { // Función de callback después de inicializar i18next
+        if (err) return console.error('Error al cargar i18next:', err);
+        updateContent(); // Actualiza el contenido de la página según el idioma inicial
+    });
+
+    // Función para actualizar el contenido de la página con los textos traducidos
+    function updateContent() {
+        document.getElementById('tituloPagina').innerHTML = i18next.t('title');
+        document.querySelector('.page-bioline').innerHTML = i18next.t('welcome');
+    }
+
 });
+
+// Función para cambiar el idioma de la página dinámicamente
+function changeLanguage(lng) {
+    i18next.changeLanguage(lng, (err, t) => {
+        if (err) {
+            console.error('Error changing language:', err);
+            alert('Failed to change language.');
+            return;
+        }
+        updateContent(); // Actualiza el contenido de la página después de cambiar el idioma
+    });
+}
