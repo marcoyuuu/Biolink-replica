@@ -27,3 +27,7 @@ Para ejecutar este proyecto en tu servidor local:
 2. Asegúrate de tener un servidor local (como XAMPP, WAMP, MAMP, o similar) corriendo.
 3. Copia los archivos clonados a la carpeta de tu servidor local.
 4. Accede al proyecto a través de tu navegador, navegando a `localhost/[nombre-de-tu-carpeta]`.
+
+## Licencia
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
