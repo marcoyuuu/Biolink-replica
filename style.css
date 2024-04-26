@@ -26,6 +26,32 @@ body {
     width: 100%;
 }
 
+/* Estilos del contenedor de los botones de compartir y cambiar lenguaje */
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Estilos del botón de cambiar lenguaje */
+.language-switcher {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: .875em;
+    font-weight: bold;
+    text-decoration: underline;
+    color: #000000;
+    transition: background-color 0.3s ease;
+    margin-top: 3vh;
+}
+
+.language-switcher:hover,
+.language-switcher:focus {
+    color: #0056b3;
+    outline: none;
+}
+
 /* Estilo para el logo en la parte superior de la página */
 .logo {
     width: 10vw;
@@ -384,8 +410,10 @@ footer {
 /* Para pantallas de ancho superior a 768px (por ejemplo, PCs y laptops) */
 @media (min-width: 768px) {
     .logo {
-        width: 8vw; /* Ajusta según sea necesario para pantallas grandes */
-        max-width: 150px; /* Puede aumentar el tamaño máximo para pantallas grandes */
+        width: 8vw;
+        /* Ajusta según sea necesario para pantallas grandes */
+        max-width: 150px;
+        /* Puede aumentar el tamaño máximo para pantallas grandes */
     }
 
     h1 {
@@ -417,7 +445,7 @@ footer {
         max-width: 125px;
         max-height: 125px;
     }
-    
+
     .cerrarModal {
         right: 1vw;
     }
@@ -476,7 +504,7 @@ footer {
         min-width: 17.5px;
         min-height: 17.5px;
     }
-    
+
     .cerrarModal {
         right: 2.5vw;
     }
