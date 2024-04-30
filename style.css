@@ -171,16 +171,6 @@ h2 {
     }
 }
 
-/* Aplica animación de terremoto a botón de Caribe Wave*/
-.boton.terremoto {
-    animation: terremoto 4s infinite;
-}
-
-/* Estilos para el botón de Caribe Wave al desplazar el cursor */
-.boton.terremoto:hover {
-    animation: terremoto 4s infinite, agrandar 0.3s forwards;
-}
-
 /* Estilo para botón que abre modal de compartir */
 #botonCompartir {
     background-color: #ffcd62;
