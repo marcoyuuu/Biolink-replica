@@ -17,7 +17,6 @@ Este proyecto es una réplica del Bio Link de la Red Sísmica de Puerto Rico hec
 - HTML5
 - CSS3 (incluyendo Flexbox para diseño responsivo)
 - JavaScript (para interactividad como modales de compartir y copiado de enlaces)
-- PHP (para elementos dinámicos como la fecha actual)
 
 ## Instalación
 
